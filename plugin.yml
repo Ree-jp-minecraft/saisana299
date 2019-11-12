@@ -1,0 +1,8 @@
+name: Saisana299
+main: Ree\saisana\main
+api : 3.0.0
+commands:
+  saisana299:
+    usage: /saisana299
+    description: saisana299
+version: 1.0.0
