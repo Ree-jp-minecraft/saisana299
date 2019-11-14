@@ -27,7 +27,7 @@ class main extends PluginBase implements Listener
             switch ($num)
             {
                 case 1:
-                    Server::getInstance()->broadcastMessage("<".$sender->getName()."> さwいwさwなw");
+                    Server::getInstance()->broadcastMessage("<".$sender->getName()."> さwいwさwなwww");
                     break;
                 case 2:
                     Server::getInstance()->broadcastMessage("<".$sender->getName()."> さいさな");
@@ -54,6 +54,7 @@ class main extends PluginBase implements Listener
         switch ($mes)
         {
             case "さwいwさwなw":
+            case "さwいwさwなwww":
             case "さいさな":
             case "くさいさな":
             case "ささささいさな":
