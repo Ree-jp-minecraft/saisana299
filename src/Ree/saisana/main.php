@@ -4,6 +4,7 @@ namespace Ree\saisana;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -44,5 +45,29 @@ class main extends PluginBase implements Listener
             return true;
         }
         return true;
+    }
+
+    public function onChat(PlayerChatEvent $ev)
+    {
+        $mes = $ev->getMessage();
+        $p = $ev->getPlayer();
+        switch ($mes)
+        {
+            case "さwいwさwなw":
+            case "さいさな":
+            case "くさいさな":
+            case "ささささいさな":
+            case "さないな":
+            case "おのれさいさな":
+                if ($p instanceof Player)
+                {
+                    $vec3 = $p->getLevel()->getSafeSpawn();
+                    $p->teleport($vec3);
+                    Server::getInstance()->broadcastMessage($p->getName()."はsaisana299にやられた");
+                    $p->setFood($p->getMaxFood());
+                    $p->setHealth($p->getMaxHealth());
+                }
+                break;
+        }
     }
 }
