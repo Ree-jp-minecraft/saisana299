@@ -41,6 +41,9 @@ class main extends PluginBase implements Listener
                 case 5:
                     Server::getInstance()->broadcastMessage("<".$sender->getName()."> さないな");
                     break;
+                case 6:
+                    Server::getInstance()->broadcastMessage("<".$sender->getName()."> さいサリンりん");
+                    break;
             }
             return true;
         }
